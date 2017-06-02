@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>reg</title>
+    <meta charset="UTF-8">
+
+    <style type="text/css">
+        body {
+            background-color: #dddddd;
+        }
+
+
+        div {
+
+            text-align: center;
+        }
+
+        form {
+            display: inline;
+        }
+
+
+        label {
+
+            border: 1px solid yellow;
+        }
+
+        select {
+            border: 1px solid yellow;
+            background: black;
+            color: #fff;
+            width: 300px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    <form>
+        First name:<br>
+        <input type="text" name="firstname"><br> Last name:<br>
+        <input type="text" name="lastname">
+    </form>
+    <hr>
+
+ 
+    <form>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+    </form>
+
+    <hr>
+
+    <form action="contactus.php" method="post">
+
+
+        <p>Name:</p>
+        <p><input type="text" name="name" value="Your name"></p>
+
+        <p>Species:</p>
+        <p><input name="species"></p>
+
+
+
+        <select>    
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option value="third option">Option 3</option>
+</select>
+
+
+        <p>Comments: </p>
+        <p><textarea name="comments" rows="5" cols="20">Your comments</textarea></p>
+
+        <p>Are you:</p>
+        <p><input type="radio" name="areyou" value="male"> Male</p>
+        <p><input type="radio" name="areyou" value="female"> Female</p>
+
+
+        <p><input type="submit"></p>
+
+    </form>
+
+
+
+    <form action="/action_page.php" method="get">
+
+
+        <label for="male">Male</label>
+        <!-- The "for" attribute is used to target a form element when you click the label -->
+        <input type="radio" name="gender" id="male" value="male"><br>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female"><br>
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other"><br><br>
+        <input type="submit" value="Submit">
+        <p>OR</p>
+
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    </form>
+
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:<br>
+            <input type="text" name="lastname" value="Mouse">
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+
+
+    <form action="someplace.php">
+        <fieldset>
+            <legend>Text and Password</legend>
+            <label for="username">Username:</label>
+            <input name="username" id="username" value="Some Text">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="Password">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Films you like</legend>
+            <div>
+                <label for="drama">Drama</label>
+                <input type="checkbox" name="drama" id="drama" value="drama">
+            </div>
+            <div>
+                <label for="action">Action</label>
+                <input type="checkbox" name="action" id="action" value="action">
+            </div>
+            <div>
+                <label for="comedy">Comedy</label>
+                <input type="checkbox" name="comedy" id="comedy" value="comedy">
+            </div>
+            <div>
+                <label for="horror">Horror</label>
+                <input type="checkbox" name="horror" id="horror" value="horror">
+            </div>
+            <div>
+                <label for="scifi">Sci-fi</label>
+                <input type="checkbox" name="scifi" id="scifi" value="scifi">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Your age</legend>
+            <div>
+                <label for="lt20">19 or under</label>
+                <input type="radio" name="age" id="lt20" value="lt20">
+            </div>
+            <div>
+                <label for="20to39">20 to 39</label>
+                <input type="radio" name="age" id="20to39" value="20to39">
+            </div>
+            <div>
+                <label for="40to59">40 to 59</label>
+                <input type="radio" name="age" id="40to59" value="40to59">
+            </div>
+            <div>
+                <label for="gt59">60 or over</label>
+                <input type="radio" name="age" id="gt59" value="gt59">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Upload file</legend>
+            <label for="uploadfile">File name: </label>
+            <input type="file" name="uploadfile" id="uploadfile">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Favourite book</legend>
+            <label for="book">Name: </label>
+            <select name="book" id="book">
+				<option>The Trial</option>
+				<option>The Outsider</option>
+				<option>Things Fall Apart</option>
+				<option>Animal Farm</option>
+			</select>
+        </fieldset>
+    </form>
+    <h1> Create this form</h1>
+
+
+
+
+
+
+
+<!-- Class work -->
+
+
+    <div>
+        <h1>Personal Information</h1>
+        <span>
+
+                            <form>
+                                <label>First Name</label>
+                                    <input type="text" name="fistname">
+                                <label>Last Name</label>
+                                    <input type="text" name="lastname">
+                                <label>User Name</label>
+                                    <input type="text" name="username">
+                                <label>Password</label>
+                                    <input type="text" name="password">
+                            </form>
+                        </span>
+        <h2>Address Information</h2>
+        <span>
+
+                            <form> 
+                                <action="action_page.php">
+                                    Country
+                                    <select name="countries">
+                                        <option value="Armenia"> Armenia </option>
+                                        <option value="USA">USA</option>
+                                        <option value="Greece">Greece</option>
+
+                                    </select></p>
+
+                                    <label>State</label>
+                                        <input type="text" name="state">
+                                    <label>City</label>
+                                        <input type="text" name="city">
+                                    <label>Street and apt. </label>
+                                        <input type="text" name="apt">
+
+                            </form>
+                        </span>
+
+    </div>
+    <hr>
+    </div>
+
+</body>
+
+</html>

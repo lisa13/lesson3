@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Forms</title>
+</head>
+
+<body style="text-align: center">
+    <p><a href="http://htmldog.com/guides/html/beginner/forms/"><img src="http://www.htmldog.com/badge1.gif" alt="HTML Dog"></a></p>
+
+    <img src="img/1.png">
+    <img src="img/2.png">
+    <h1>The input tag is the daddy of the form world. It can take a multitude of forms</h1>
+
+    <!-- simple text form-->
+    <form>
+        First name:<br>
+        <input type="text" name="firstname"><br> Last name:<br>
+        <!--NAME:: Each input field must have a name attribute to be submitted.
+
+If the name attribute is omitted, the data of that input field will not be sent at all. -->
+        <input type="text" name="lastname">
+    </form>
+    <hr>
+    <!-- radio -->
+
+    <form>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+    </form>
+
+    <hr>
+
+    <!-- a form with  a get post action -->
+    <form action="contactus.php" method="post">
+
+        <!--ACTION defines the action to be performed when the form is submitted.
+
+Normally, the form data is sent to a web page on the server when the user clicks on the submit button 
+This page contains a server-side script that handles the form data:-->
+        <p>Name:</p>
+        <p><input type="text" name="name" value="Your name"></p>
+
+        <p>Species:</p>
+        <p><input name="species"></p>
+        <!-- remember: 'type="text"' isn't actually necessary -->
+
+
+        <select>    
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option value="third option">Option 3</option>
+</select>
+
+
+        <p>Comments: </p>
+        <p><textarea name="comments" rows="5" cols="20">Your comments</textarea></p>
+        <!--The rows attribute specifies the visible number of lines in a text area. -->
+        <!--The cols attribute specifies the visible width of a text area.-->
+
+        <p>Are you:</p>
+        <p><input type="radio" name="areyou" value="male"> Male</p>
+        <p><input type="radio" name="areyou" value="female"> Female</p>
+
+
+        <p><input type="submit"></p>
+
+    </form>
+
+    <!-- with labels -->
+
+    <form action="/action_page.php" method="get">
+        <!--The method attribute specifies the HTTP method (GET or POST)
+     to be used when submitting the form data. The default method when submitting form data is GET.
+     the submitted form data will be visible in the page address field
+      data contains sensitive or personal information. The POST method does not display the submitted form data in the page address field.
+     -->
+
+        <label for="male">Male</label>
+        <!-- The "for" attribute is used to target a form element when you click the label -->
+        <input type="radio" name="gender" id="male" value="male"><br>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female"><br>
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other"><br><br>
+        <input type="submit" value="Submit">
+        <p>OR</p>
+
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+    </form>
+
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personal information:</legend>
+            First name:<br>
+            <input type="text" name="firstname" value="Mickey">
+            <br> Last name:<br>
+            <input type="text" name="lastname" value="Mouse">
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+
+    <img src="img/3.png">
+    <hr>
+    <img src="img/10.png">
+    <hr>
+    <img src="img/5.png">
+
+    <img src="img/8.png">
+    <img src="img/9.png">
+
+    <form action="someplace.php">
+        <fieldset>
+            <legend>Text and Password</legend>
+            <label for="username">Username:</label>
+            <input name="username" id="username" value="Some Text">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="Password">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Films you like</legend>
+            <div>
+                <label for="drama">Drama</label>
+                <input type="checkbox" name="drama" id="drama" value="drama">
+            </div>
+            <div>
+                <label for="action">Action</label>
+                <input type="checkbox" name="action" id="action" value="action">
+            </div>
+            <div>
+                <label for="comedy">Comedy</label>
+                <input type="checkbox" name="comedy" id="comedy" value="comedy">
+            </div>
+            <div>
+                <label for="horror">Horror</label>
+                <input type="checkbox" name="horror" id="horror" value="horror">
+            </div>
+            <div>
+                <label for="scifi">Sci-fi</label>
+                <input type="checkbox" name="scifi" id="scifi" value="scifi">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Your age</legend>
+            <div>
+                <label for="lt20">19 or under</label>
+                <input type="radio" name="age" id="lt20" value="lt20">
+            </div>
+            <div>
+                <label for="20to39">20 to 39</label>
+                <input type="radio" name="age" id="20to39" value="20to39">
+            </div>
+            <div>
+                <label for="40to59">40 to 59</label>
+                <input type="radio" name="age" id="40to59" value="40to59">
+            </div>
+            <div>
+                <label for="gt59">60 or over</label>
+                <input type="radio" name="age" id="gt59" value="gt59">
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Upload file</legend>
+            <label for="uploadfile">File name: </label>
+            <input type="file" name="uploadfile" id="uploadfile">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Favourite book</legend>
+            <label for="book">Name: </label>
+            <select name="book" id="book">
+				<option>The Trial</option>
+				<option>The Outsider</option>
+				<option>Things Fall Apart</option>
+				<option>Animal Farm</option>
+			</select>
+        </fieldset>
+    </form>
+  <h1> Create this form</h1>
+ <img src="img/assignment.png">
+
+</body>
+
+</html>
